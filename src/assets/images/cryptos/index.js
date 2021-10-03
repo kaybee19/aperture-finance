@@ -1,0 +1,15 @@
+export {default as daiLogo } from './dai-logo.png';
+export {default as yearnLogo } from './yearn-logo.png';
+export {default as loopringLogo } from './loopring-logo.png';
+export {default as oxLogo } from './ox-logo.png';
+export {default as aaveLogo } from './aave-logo.png';
+export {default as makerLogo } from './maker-logo.png';
+export {default as umaLogo } from './uma-logo.png';
+export {default as chainlinkLogo } from './chainlink-logo.png';
+export {default as bitcoinLogo } from './bitcoin-logo.png';
+export {default as compoundLogo } from './compound-logo.png';
+export {default as uniLogo } from './uni-logo.png';
+export {default as kyberLogo } from './kyber-logo.png';
+export {default as synthetixLogo } from './synthetix-logo.png';
+export {default as renLogo } from './ren-logo.png';
+export {default as avaxLogo } from './avax-logo.png';
