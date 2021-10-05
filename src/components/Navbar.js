@@ -17,16 +17,18 @@ import PersonIcon from '@mui/icons-material/Person';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const NavButton = styled.div`
-	& p {
-		display: none!important
-	}
-	& button {
-		background-color: transparent!important;
-		color: rgb(82, 52, 249);
-		padding: 0!important;
-	}
-	& svg {
-		font-size: 2rem!important;
+	@media (max-width: 600px) {
+		& p {
+			display: none!important
+		}
+		& button {
+			background-color: transparent!important;
+			color: rgb(82, 52, 249);
+			padding: 0!important;
+		}
+		& svg {
+			font-size: 2rem!important;
+		}
 	}
 `;
 

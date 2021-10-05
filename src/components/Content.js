@@ -14,7 +14,9 @@ const ContentWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-top: 5rem;
+	&:first-child {
+		padding-top: 5rem;
+	}
 	@media (max-width: 900px) {
 		flex-direction: column!important;
 	}
