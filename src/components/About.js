@@ -22,8 +22,18 @@ const Wrapper = styled.div`
 	padding: 96px;
 	background-color: #FAFAFA;
 	text-align: center;
-	& h4 { text-transform: capitalize; font-weight: 600; }
-	& p { max-width: 965px; margin: auto; margin-top: 1rem; }
+	& h4 {
+		text-transform: capitalize;
+		font-weight: 600;
+	}
+	& p {
+		max-width: 965px;
+		margin: auto;
+		margin-top: 1rem;
+	}
+	@media (max-width: 900px) {
+		padding: 48px 24px;
+	}
 `;
 
 const CardWrapper = styled(Grid)`
