@@ -70,7 +70,7 @@ export default function Risks() {
 	}
 
 	return (
-		<Wrapper className='borderClass'>
+		<Wrapper id='risks' className='borderClass'>
 			<div ref={ref}>
 				<TextWrapper transitionDuration={1000} delay={200} visible={view}>
 					<Typography variant='h4' style={{fontWeight: 600}}>{text[language] && text[language].title}</Typography>

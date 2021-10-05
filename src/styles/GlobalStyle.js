@@ -159,8 +159,9 @@ const GlobalStyle = createGlobalStyle`
 		z-index: -10;
 	}
 	.reverse {
-  	float: right;
-  	animation-name: icon-animation-reverse;
+  	float: right!important;
+  	left: auto!important;
+  	animation-name: icon-animation-reverse!important;
 	}
 	@media (max-width: 900px) {
 		#how .container .textColor {
@@ -183,9 +184,13 @@ const GlobalStyle = createGlobalStyle`
 	/*-- Footer --*/
 	#footer {
 		min-height: 18vh;
+    background: white;
 		position: relative;
 		@media (max-width: 900px) {
 			min-height: 22.5vh;
+		}
+		@media (max-width: 900px) and (max-height: 500px) {
+			min-height: 50vh;
 		}
 	}
 

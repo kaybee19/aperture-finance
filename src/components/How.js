@@ -42,6 +42,9 @@ const CardWrapper = styled(SmoothList)`
 		height: auto;
 		flex-direction: column;
 		align-items: center;
+		& > div {
+			width: 100%;
+		}
 	}
 `;
 
@@ -89,13 +92,32 @@ const CardBody = styled.div`
 		transition: .25s;
 		transition-timing-function: ease-out;
 	}
+	@media (min-width: 1450px) {
+		width: 300px;
+	}
+	@media (max-width: 1100px) {
+		width: 200px;
+	}
 	@media (max-width: 900px) {
-    width: 225px;
+    width: 85%;
+    margin: auto;
     height: 300px;
     margin-bottom: 2rem;
+    & > div {
+
+    }
 		.cardText {
 			top: 100px;
 		}
+	}
+	@media (max-width: 900px) and (max-height: 500px) {
+		height: 175px;
+		& .cardText {
+			top: 50px;
+		}
+	}
+	@media (max-width: 500px) {
+    width: 75%;
 	}
 `;
 

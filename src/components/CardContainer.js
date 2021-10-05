@@ -62,16 +62,19 @@ const Grid = styled.div`
 `;
 
 const StableWrapper = styled.div`
-	padding-top: 5rem!important;
-	padding-bottom: 5rem!important;
+	padding-top: 4rem!important;
+	padding-bottom: 4rem!important;
 	& h5 {
-		width: 57.5%;
+		width: 65%;
 		font-weight: 600;
 		margin: 1.5rem 0;
 	}
 	& p {
-		width: 57.5%;
+		width: 65%;
 		margin-top: 1rem
+	}
+	@media (min-width: 900px) and (max-width: 1100px) {
+		padding-bottom: 2.5rem!important;
 	}
 	@media (max-width: 900px) {
 		& p {
@@ -112,7 +115,7 @@ export default function CardContainer() {
   const child = React.useRef(null);
 
   const [ref, isVisible] = useInView({
-    threshold: .5,
+    threshold: .25,
   })
 
   // Trigger setView on viewport enter

@@ -47,7 +47,7 @@ export default function About() {
 	const { language } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: .5,
+    threshold: .25,
   })
 
   // Trigger setView on viewport enter
@@ -108,7 +108,7 @@ export default function About() {
 	}
 
 	return (
-		<Wrapper className='container'>
+		<Wrapper id='about' className='container'>
 			<Typography variant='h4'>{Object.keys(text[language])}</Typography>
 			<Typography className='textColor' variant='body1'>{Object.values(text[language])}</Typography>
 			<div ref={ref}>

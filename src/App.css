@@ -47,6 +47,6 @@
 }
 
 @keyframes icon-animation-reverse {
-  from {left: 0;}
-  to {left: 1570px;}
+  from {right: 0;}
+  to {right: -1570px;}
 }

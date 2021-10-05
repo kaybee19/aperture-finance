@@ -63,8 +63,15 @@ const Image = styled.div`
 		max-width: 125px;
 		height: auto;
 	}
+	@media (max-width: 900px) {
+		height: 25px;
+		& img {
+			max-width: 85px;
+		}
+	}
 	@media (max-width: 600px) {
 		margin-bottom: 2rem;
+		height: 32px;
 		max-width: 200px;
 		& img {
 			max-width: 100px;

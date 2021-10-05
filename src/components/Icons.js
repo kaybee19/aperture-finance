@@ -39,8 +39,14 @@ const IconBody = styled.div`
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: backwards;
+	@media (min-width: 900px) and (max-width: 1100px) {
+    padding: 0 0 1rem;
+	}
   @media (max-width: 600px) and (max-height: 700px) {
   	padding-bottom: 1rem;
+  }
+  @media (max-width: 900px) and (max-height: 500px) {
+  	display: none;
   }
 `;
 

@@ -56,9 +56,9 @@ const Close = styled.span`
 	top: 0;
 	right: 0;
 	margin: 1rem;
-	padding: 1rem;
-	font-size: 2rem;
-	font-weight: 500;
+	padding: 0 1rem;
+	font-size: 3rem;
+	font-weight: 200;
 	cursor: pointer;
 `
 
