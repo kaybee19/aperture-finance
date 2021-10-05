@@ -17,6 +17,7 @@ const Card = styled.div`
 	border-radius: 8px;
 	@media (max-width: 600px) {
 		margin: 2rem 0;
+		padding: 16px;
 	}
 `;
 
