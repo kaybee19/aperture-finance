@@ -94,6 +94,14 @@ const GlobalStyle = createGlobalStyle`
 	#basic-menu .MuiPopover-paper .Mui-focusVisible:hover {
 		background-color: rgba(0, 0, 0, 0.04);
 	}
+	@media (max-width: 600px) {
+		#languageButton {
+			margin: .25rem 0.75rem 0 .25rem!important;
+		}
+		.languageClass {
+			margin: 0;
+		}
+	}
 
 
 /*----------------------------
@@ -109,6 +117,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 	.heroText button {
 		margin-top: 2rem;
+	}
+	@media (max-width: 900px) {
+		.heroText {
+			width: 80%;
+		}
 	}
 
 	/*-- Content --*/
@@ -146,20 +159,31 @@ const GlobalStyle = createGlobalStyle`
   	float: right;
   	animation-name: icon-animation-reverse;
 	}
+	@media (max-width: 900px) {
+		#how .container .textColor {
+			width: auto;
+		}
+	}
 
 	/*-- Launch App --*/
 	#launch {
 		min-height: 120vh;
+		position: relative;
 	}
 
 	/*-- Performance --*/
 	#performance {
 		min-height: 120vh;
+		position: relative;
 	}
 
 	/*-- Footer --*/
 	#footer {
 		min-height: 18vh;
+		position: relative;
+		@media (max-width: 900px) {
+			min-height: 22.5vh;
+		}
 	}
 
 

@@ -15,6 +15,9 @@ const Card = styled.div`
 	background: #FFFFFF;
 	box-shadow: 0px 1px 2px rgba(82, 52, 249, 0.02), 0px 4px 8px rgba(82, 52, 249, 0.08);
 	border-radius: 8px;
+	@media (max-width: 600px) {
+		margin: 2rem 0;
+	}
 `;
 
 const ImageContainer = styled.div`

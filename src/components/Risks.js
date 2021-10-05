@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/Context';
 import styled from 'styled-components';
+import risks from '../assets/images/risks.png';
 
 // Hook for checking viewport + animation package
 import { useInView } from 'react-hook-inview';
@@ -16,6 +17,10 @@ const Wrapper = styled.div`
 	justify-content: space-between;
 	align-items: center;
 	padding: 96px;
+	@media (max-width: 900px) {
+		padding: 48px 24px;
+		flex-direction: column;
+	}
 `;
 
 const TextWrapper = styled(SmoothList)`
@@ -29,13 +34,13 @@ const TextWrapper = styled(SmoothList)`
 	}
 `;
 
-const Image = styled.div`
-	min-width: 506px;
-	height: 483px;
-	left: 742px;
-	top: 0px;
-	background-color: white;
-	border-radius: 8px;
+const Image = styled.img`
+	height: auto;
+	max-width: 500px;
+	@media (max-width: 600px) {
+		max-width: 300px;
+		margin: auto;
+	}
 `
 
 export default function Risks() {
@@ -73,7 +78,7 @@ export default function Risks() {
 					<Typography variant='body1'>{text[language] && text[language].body2}</Typography>
 				</TextWrapper>
 			</div>
-			<Image />
+			<Image src={risks} alt='risks' />
 		</Wrapper>
 	);
 }

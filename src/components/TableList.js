@@ -10,12 +10,19 @@ const Wrapper = styled.div`
 	padding: 16px;
 	display: flex;
 	align-items: baseline;
+	@media (max-width: 900px) {
+		flex-direction: column;
+	}
 `;
 
 const Header = styled(Typography)`
 	color: #7C65FA;
 	min-width: 200px;
 	text-transform: capitalize;
+	@media (max-width: 900px) {
+		margin-bottom: 1rem!important;
+		font-weight: bold!important;
+	}
 `;
 
 const Body = styled(Typography)`

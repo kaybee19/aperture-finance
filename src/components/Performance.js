@@ -24,12 +24,29 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   z-index: -2;
+	@media (max-width: 900px) {
+		padding-bottom: 48px;
+		& p {
+			font-size: .85rem;
+		}
+		& p:last-child {
+			margin-top: 1rem;
+			font-size: .5rem;
+		}
+	}
 `;
 
 const CardContainer = styled(SmoothList)`
 	display: flex;
-	& div	{
-		margin-right: 2rem;
+	& span	{
+		display: flex;
+	}
+	@media (max-width: 900px) {
+		flex-direction: column;
+		& span	{
+			display: flex;
+    	justify-content: space-between;
+		}
 	}
 `
 
@@ -43,9 +60,26 @@ const CardWrapper = styled.div`
 	box-shadow: 0px 1px 2px rgba(20, 28, 31, 0.02), 0px 4px 8px rgba(20, 28, 31, 0.08);
 	border-radius: 8px;
 	margin: 3rem 0;
+	margin-right: 2rem;
 	& h6 {
 		margin-top: 1rem;
 		font-weight: 600;
+	}
+	@media (max-width: 900px) {
+		margin: 2rem 0;
+		margin-right: 1rem;
+		max-width: 140px;
+		min-width: auto;
+		& h6 {
+			font-size: 1rem;
+			margin-top: .5rem;
+		}
+		& p {
+			font-size: .75rem;
+		}
+	}
+	@media (max-width: 600px) and (max-height: 700px) {
+		margin: .5rem 0;
 	}
 `;
 
@@ -123,11 +157,20 @@ export default function Performance() {
 				<Charts />
 				<div ref={ref}>
 					<CardContainer transitionDuration={500} delay={200} visible={view}>
-						{
-							cardText.map((card, i) => (
-								<Card title={card.title} number={card.number} />
-							))
-						}
+						<span>
+							{
+								cardText.slice(0, 2).map((card, i) => (
+									<Card title={card.title} number={card.number} />
+								))
+							}
+						</span>
+						<span>
+							{
+								cardText.slice(2, 4).map((card, i) => (
+									<Card title={card.title} number={card.number} />
+								))
+							}
+						</span>
 					</CardContainer>
 				</div>
 				<Typography variant='body1'>{text[language] && text[language].disclaimer}</Typography>

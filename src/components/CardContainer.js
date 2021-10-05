@@ -28,6 +28,9 @@ const Wrapper = styled.div`
 	border-radius: 40px;
 	display: flex;
 	box-shadow: 2px 2px 10px 10px rgba(0,0,0,.075);
+	@media (max-width: 900px) {
+		flex-direction: column;
+	}
 `;
 
 const Grid = styled.div`
@@ -43,6 +46,19 @@ const Grid = styled.div`
 	& p {
 		margin-bottom: 1rem
 	}
+	@media (max-width: 900px) {
+		width: auto;
+		&:last-child {
+			border-radius: 40px;
+			margin-top: -2.25rem;
+		}
+	}
+	@media (max-width: 600px) {
+		padding: 48px 24px;
+		&:first-child {
+			padding-bottom: 4rem;
+		}
+	}
 `;
 
 const StableWrapper = styled.div`
@@ -56,6 +72,19 @@ const StableWrapper = styled.div`
 	& p {
 		width: 57.5%;
 		margin-top: 1rem
+	}
+	@media (max-width: 900px) {
+		& p {
+			width: auto;
+			font-size: 14px;
+		}	
+	}
+	@media (max-width: 600px) and (min-height: 700px) {
+		padding-top: 2.5rem!important;
+	}
+	@media (max-width: 600px) and (max-height: 700px) {
+		padding-top: 2.5rem!important;
+		padding-bottom: 2.5rem!important;
 	}
 `;
 

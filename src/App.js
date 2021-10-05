@@ -20,6 +20,7 @@ function App() {
       <AppProvider>
         <GlobalStyle />
         <Navbar />
+        <div id="tsparticles"></div>
         <Switch>
           <Route exact path='/' component={Home} />
           <Route component={NotFound} />

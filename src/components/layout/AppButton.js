@@ -12,13 +12,17 @@ const ButtonWrapper = styled(Button)`
 	border-radius: 8px!important;
 	text-transform: capitalize!important;
 	box-shadow: none!important;
+	& p {
+		margin-top: 0rem!important;
+		margin-bottom: 0rem!important;
+	}
 `
 
 export default function AppButton(props) {
 
 	return (
 		<React.Fragment>
-      <ButtonWrapper style={{ backgroundColor: props.color }} startIcon={props.icon} variant="contained">{props.text}</ButtonWrapper>
+      <ButtonWrapper style={{ backgroundColor: props.color }} startIcon={props.icon} variant="contained"><p>{props.text}</p></ButtonWrapper>
 		</React.Fragment>
 	);
 }

@@ -21,6 +21,11 @@ const Wrapper = styled.div`
   position: fixed;
   top: 0;
   z-index: -2;
+  @media (max-width: 600px) {
+  	padding: 48px 0px 48px 24px;
+  	flex-direction: column;
+  	justify-content: flex-start;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -29,6 +34,9 @@ const TextWrapper = styled.div`
 	}
 	& p {
 		margin-bottom: 2rem;
+		@media (max-width: 600px) {
+			padding-right: 2rem;
+		}
 	}
 `;
 
@@ -36,9 +44,15 @@ const Image = styled.img`
 	width: 900px;
 	position: relative;
 	left: 200px;
+	@media (max-width: 600px) {
+		width: 450px;
+		margin-top: 100px;
+		left: 75px;
+	}
 `
 
-const WrapperChild = styled.div``;
+const WrapperChild = styled.div`
+`;
 
 export default function LaunchApp() {
 	

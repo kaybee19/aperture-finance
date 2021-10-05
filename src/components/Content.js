@@ -14,11 +14,23 @@ const ContentWrapper = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 10rem 0;
+	padding-top: 5rem;
+	@media (max-width: 900px) {
+		flex-direction: column!important;
+	}
 `;
 
 const TextWrapper = styled(SmoothList)`
-	width: 47.5%
+	width: 47.5%;
+	@media (max-width: 900px) {
+		width: 95%;
+	}
+`;
+
+const Image = styled.img`
+	@media (max-width: 600px) {
+		width: 100%;
+	}
 `;
 
 export default function Content(props) {
@@ -38,20 +50,20 @@ export default function Content(props) {
 
 	return (
 		<ContentWrapper ref={ref} id='contentWrapper' style={ props.reverse && { flexDirection: 'row-reverse' }}>
-		{
-			text !== undefined &&
-			<TextWrapper transitionDuration={1000} delay={200} visible={view}>
-				<Typography variant='h5' style={{fontWeight: 600}}>{text.heading}</Typography>
-				<Typography className='textColor' variant='body1'>{text.subText}</Typography>
-				{
-					text.buttonText &&
-					<AppButton text={text.buttonText} color={colorSelect('secondary')} />
-				}
-			</TextWrapper>
-		}
-		<div>
-			<img src={""} className='animateImg' alt='' />
-		</div>
+			{
+				text !== undefined &&
+				<TextWrapper transitionDuration={1000} delay={200} visible={view}>
+					<Typography variant='h5' style={{fontWeight: 600}}>{text.heading}</Typography>
+					<Typography className='textColor' variant='body1'>{text.subText}</Typography>
+					{
+						text.buttonText &&
+						<AppButton text={text.buttonText} color={colorSelect('secondary')} />
+					}
+				</TextWrapper>
+			}
+			<div>
+				<Image src={props.image} className='animateImg' alt='' />
+			</div>
 		</ContentWrapper>
 	);
 }

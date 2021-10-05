@@ -39,6 +39,9 @@ const IconBody = styled.div`
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-fill-mode: backwards;
+  @media (max-width: 600px) and (max-height: 700px) {
+  	padding-bottom: 1rem;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -54,6 +57,14 @@ const IconWrapper = styled.div`
 	border-radius: 8px;
 	& p {
 		margin-left: 1.5rem
+	}
+	@media (max-width: 600px) {
+		padding: 10px 12px;
+		min-width: 200px;
+		& img {
+			width: 33px!important;
+
+		}
 	}
 `;
 

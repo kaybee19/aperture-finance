@@ -24,6 +24,12 @@ const Wrapper = styled.div`
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 900px) {
+		flex-direction: column;
+		& a {
+			margin-top: 1rem;
+		}
+	}
 `;
 
 const Icons = styled.div`

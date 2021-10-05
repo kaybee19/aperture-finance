@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import styled from 'styled-components';
 import { useApp } from '../context/Context';
 import AppButton from './layout/AppButton';
 
@@ -14,6 +15,20 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import PersonIcon from '@mui/icons-material/Person';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+
+const NavButton = styled.div`
+	& p {
+		display: none!important
+	}
+	& button {
+		background-color: transparent!important;
+		color: rgb(82, 52, 249);
+		padding: 0!important;
+	}
+	& svg {
+		font-size: 2rem!important;
+	}
+`;
 
 export default function Navbar() {
 
@@ -62,7 +77,9 @@ export default function Navbar() {
 					<img src={logo} width='50' alt='aperture finance' />
 				</Link>
 				<div className='navContent'>
-					<AppButton icon={<PersonIcon />} text={buttonText[language]} color={colorSelect('primary')} />
+					<NavButton>
+						<AppButton icon={<PersonIcon />} text={buttonText[language]} color={colorSelect('primary')} />
+					</NavButton>
 					<div className='flexClass languageClass'>
 						<div id='nav-menu'>
 							<div

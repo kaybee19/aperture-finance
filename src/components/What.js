@@ -17,6 +17,10 @@ const Wrapper = styled.div`
 	color: white;
 	padding-top: 96px;
 	padding-bottom: 96px;
+	@media (max-width: 900px) {
+		padding-top: 48px;
+		padding-bottom: 48px;
+	}
 `;
 
 const TextWrapper = styled.div`

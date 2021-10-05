@@ -18,6 +18,11 @@ const Wrapper = styled(SmoothList)`
 	flex-direction: column;
 	position: relative;
 	z-index: 5;
+	@media (max-width: 900px) {
+		& h2 {
+			font-size: 2.5rem;
+		}
+	}
 `;
 
 export default function Hero(props) {
@@ -77,7 +82,7 @@ export default function Hero(props) {
 		    	"mode":[],
 		    	"type":"circle"},
 		    	"onHover":{"enable":true,
-		    	"mode":"slow",
+		    	"mode":"grab",
 		    	"parallax":{"enable":false,
 		    	"force":60,
 		    	"smooth":10}},
@@ -97,7 +102,7 @@ export default function Hero(props) {
 		    	"connect":{"distance":80,
 		    	"links":{"opacity":0.5},
 		    	"radius":60},
-		    	"grab":{"distance":400,
+		    	"grab":{"distance":200,
 		    	"links":{"blink":false,
 		    	"consent":false,
 		    	"opacity":1}},
@@ -220,7 +225,7 @@ export default function Hero(props) {
 		    	"top":"out"},
 		    	"random":false,
 		    	"size":false,
-		    	"speed":5,
+		    	"speed":1.5,
 		    	"spin":{"acceleration":0,
 		    	"enable":false},
 		    	"straight":false,

@@ -39,6 +39,12 @@ const IconWrapper = styled(SmoothList)`
 	width: 100%;
 	justify-content: space-around;
 	margin-top: 3rem;
+	@media (max-width: 600px) {
+		flex-direction: column;
+		&:last-child {
+			margin-top: 0;
+		}
+	}
 `;
 
 const Image = styled.div`
@@ -57,6 +63,13 @@ const Image = styled.div`
 		max-width: 125px;
 		height: auto;
 	}
+	@media (max-width: 600px) {
+		margin-bottom: 2rem;
+		max-width: 200px;
+		& img {
+			max-width: 100px;
+		}
+	}
 `;
 
 export default function Partners() {
@@ -64,7 +77,7 @@ export default function Partners() {
 	const { language } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: 1,
+    threshold: .5,
   })
 
   // Trigger setView on viewport enter
