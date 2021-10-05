@@ -56,6 +56,9 @@ const Image = styled.img`
 	width: 900px;
 	position: relative;
 	left: 200px;
+  @media (min-width: 1800px) {
+		left: 100px;
+  }
 	@media (max-width: 1200px) {
 		width: 750px;
 	}
