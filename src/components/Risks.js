@@ -21,6 +21,10 @@ const Wrapper = styled.div`
 		padding: 48px 24px;
 		flex-direction: column;
 	}
+  @media (min-width: 1800px) {
+  	justify-content: center;
+  	align-items: center;
+  }
 `;
 
 const TextWrapper = styled(SmoothList)`

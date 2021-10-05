@@ -6,6 +6,10 @@ import cr from '../assets/images/cr.png';
 const Wrapper = styled.div`
 	margin-top: 3rem;
 	justify-content: space-between;
+  @media (min-width: 1800px) {
+  	justify-content: center;
+  	align-items: center;
+  }
 	@media (max-width: 900px) {
 		margin-bottom: 1rem;
 		& img:nth-of-type(2) {
