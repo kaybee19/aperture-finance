@@ -1,5 +1,6 @@
 import React from 'react';
 import AppButton from './layout/AppButton';
+import { HashLink } from 'react-router-hash-link';
 import styled from 'styled-components';
 import { useApp } from '../context/Context';
 
@@ -59,7 +60,9 @@ export default function Content(props) {
 					<Typography className='textColor' variant='body1'>{text.subText}</Typography>
 					{
 						text.buttonText &&
-						<AppButton text={text.buttonText} color={colorSelect('secondary')} />
+						<HashLink className='button-link' to={`/#${props.link}`}>
+							<AppButton text={text.buttonText} color={colorSelect('secondary')} />
+						</HashLink>
 					}
 				</TextWrapper>
 			}

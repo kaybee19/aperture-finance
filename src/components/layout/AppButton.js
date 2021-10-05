@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from "react-router-dom";
 import styled from 'styled-components'
 import Button from '@mui/material/Button';
 
@@ -20,9 +21,13 @@ const ButtonWrapper = styled(Button)`
 
 export default function AppButton(props) {
 
+	let buttonProps = <ButtonWrapper style={{ backgroundColor: props.color }} startIcon={props.icon} variant="contained"><p>{props.text}</p></ButtonWrapper>
+
 	return (
 		<React.Fragment>
-      <ButtonWrapper style={{ backgroundColor: props.color }} startIcon={props.icon} variant="contained"><p>{props.text}</p></ButtonWrapper>
+			{
+				props.link ? <Link className='button-link'  to={{ pathname: props.link }} target={props.external && '_blank'}>{buttonProps}</Link> : buttonProps
+			}
 		</React.Fragment>
 	);
 }

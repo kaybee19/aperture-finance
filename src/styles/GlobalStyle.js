@@ -40,6 +40,9 @@ const GlobalStyle = createGlobalStyle`
 	.borderClass {
 		border-radius: 40px;
 	}
+	.button-link {
+		text-decoration: none;
+	}
 
 	/*-- Fonts --*/
 

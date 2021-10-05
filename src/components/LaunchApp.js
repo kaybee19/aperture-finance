@@ -107,7 +107,7 @@ export default function LaunchApp() {
 						<Typography variant='body1'>{text[language] && text[language].body}</Typography>
 						{/*<Typography variant='subtitle2'>{text[language] && text[language].button}</Typography>*/}
 					</TextWrapper>
-					<AppButton color={colorSelect('primary')} text={text[language] && text[language].button} />
+					<AppButton color={colorSelect('primary')} link='http://vps.aperture.finance:8080/' external text={text[language] && text[language].button} />
 				</WrapperChild>
 				<Image src={investorPortal} width='900' alt="investor portal" />
 			</Wrapper>

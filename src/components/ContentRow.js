@@ -23,7 +23,8 @@ export default function ContentRow() {
 				subText: '区块链投资和去中心化金融对投资者存在天然技术门槛。交易和转账的非可逆性，也让许多投资者望而却步。Aperture Finance使用硬件钱包、多方签名等多重手段，保障资产安全。帮您拓宽投资领域，让您放心参与并享受去中心化金融的先行者红利。',
 				buttonText: '基金种类'
 			},
-			image: diversify
+			image: diversify,
+			link: 'funds'
 		},
 		{
 			english: {
@@ -37,6 +38,7 @@ export default function ContentRow() {
 				buttonText: '了解详情'
 			},
 			image: defi,
+			link: 'performance',
 			reverse: true
 		},
 		{
@@ -58,7 +60,7 @@ export default function ContentRow() {
 		<div className='container bg-white'>
 		{
 			contentText.map((con, i) => (
-				<Content key={i} image={con.image} reverse={con.reverse} text={con[language]} />
+				<Content key={i} image={con.image} link={con.link} reverse={con.reverse} text={con[language]} />
 			))
 		}
 		</div>

@@ -34,7 +34,7 @@ const Wrapper = styled.div`
 
 const Icons = styled.div`
 	display: flex;
-	& svg {
+	& a {
 		margin-left: .75rem;
 	}
 `;

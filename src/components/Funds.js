@@ -82,7 +82,7 @@ export default function Funds() {
 	}
 
 	return (
-		<Wrapper className='borderClass container'>
+		<Wrapper id='funds' className='borderClass container'>
 			<TextWrapper>
 				<Typography variant='h4' style={{fontWeight: 600}}>{text[language] && text[language].title}</Typography>
 				<Typography variant='body1'>{text[language] && text[language].subText}</Typography>

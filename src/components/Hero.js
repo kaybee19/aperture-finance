@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { HashLink } from 'react-router-hash-link';
 import { useApp } from '../context/Context';
 import AppButton from './layout/AppButton';
 import Particles from "react-tsparticles";
@@ -16,8 +17,10 @@ const Wrapper = styled(SmoothList)`
 	text-align: center;
 	margin: auto;
 	flex-direction: column;
-	position: relative;
-	z-index: 5;
+	& button {
+		position: relative;
+		z-index: 5;
+	}
 	@media (max-width: 900px) {
 		& h2 {
 			font-size: 2.5rem;
@@ -334,7 +337,9 @@ export default function Hero(props) {
 		  />
 				<Typography variant='h2' className='fontBold'>{h2Text[language]}</Typography>
 				<Typography className='textColor' variant='body1'>{subText[language]}</Typography>
-				<AppButton text={buttonText[language]} color={colorSelect('primary')} />
+				<HashLink className='button-link' to='/#how'>
+					<AppButton text={buttonText[language]} color={colorSelect('primary')} />
+				</HashLink>
 			</Wrapper>
 		</div>
 	);
