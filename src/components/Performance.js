@@ -59,7 +59,7 @@ const CardWrapper = styled.div`
 	background: #FFFFFF;
 	box-shadow: 0px 1px 2px rgba(20, 28, 31, 0.02), 0px 4px 8px rgba(20, 28, 31, 0.08);
 	border-radius: 8px;
-	margin: 3rem 0;
+	margin: 2rem 0;
 	margin-right: 2rem;
 	& h6 {
 		margin-top: 1rem;
@@ -82,6 +82,11 @@ const CardWrapper = styled.div`
 		margin: .5rem 0;
 	}
 `;
+
+const ChartContainer = styled.div`
+	display: flex;
+	justify-content: space-between;
+`
 
 const Card = (props) => {
 	return (
@@ -154,7 +159,10 @@ export default function Performance() {
 			<Wrapper ref={child} className='container'>
 				<Typography style={{fontWeight: 600}} variant='h4'>{text[language] && text[language].header}</Typography>
 				<Typography style={{marginTop: '1.25rem'}} variant='body1'>{text[language] && text[language].subText}</Typography>
-				<Charts />
+				<ChartContainer>
+					<Charts />
+					<Charts />
+				</ChartContainer>
 				<div ref={ref}>
 					<CardContainer transitionDuration={500} delay={200} visible={view}>
 						<span>
