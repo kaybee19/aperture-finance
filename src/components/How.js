@@ -73,6 +73,7 @@ const CardBody = styled.div`
 		font-weight: 500!important;
 		border-radius: 1000px!important;
 		margin: 0 auto;
+		margin-left: 0;
 		padding-left: 3rem!important;
 		padding-right: 3rem!important;
 		opacity: 0;

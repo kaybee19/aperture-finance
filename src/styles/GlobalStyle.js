@@ -43,6 +43,10 @@ const GlobalStyle = createGlobalStyle`
 	.button-link {
 		text-decoration: none;
 	}
+	.linkClass {
+		color: #5234F9!important;
+		text-decoration: none;
+	}
 
 	/*-- Fonts --*/
 
@@ -179,6 +183,19 @@ const GlobalStyle = createGlobalStyle`
 	#performance {
 		min-height: 120vh;
 		position: relative;
+	}
+	#performance .g2-tooltip-value {
+		position: relative;
+		font-weight: 600;
+	}
+	#performance .g2-tooltip-value:before  {
+		content: '$';
+		position: absolute;
+		font-weight: 600;
+		left: -8px;
+		top: 0;
+		height: 100%;
+		width: 100%;
 	}
 
 	/*-- Footer --*/

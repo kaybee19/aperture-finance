@@ -22,8 +22,6 @@ const Wrapper = styled.div`
 	color: white;
 	padding-top: 96px;
 	padding-bottom: 96px;
-  border-bottom-left-radius: 0!important;
-  border-bottom-right-radius: 0!important;
 `;
 
 const TextWrapper = styled.div`

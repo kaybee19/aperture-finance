@@ -21,6 +21,9 @@ const ContentWrapper = styled.div`
 	@media (max-width: 900px) {
 		flex-direction: column!important;
 	}
+	@media (max-width: 900px) {
+		flex-direction: column-reverse!important;
+	}
 `;
 
 const TextWrapper = styled(SmoothList)`

@@ -16,6 +16,9 @@ const FooterWrapper = styled.div`
   position: fixed;
   z-index: -1;
   bottom: 0;
+  & a {
+  	color: black!important;
+  }
 `;
 
 const Wrapper = styled.div`
@@ -96,7 +99,7 @@ export default function Footer() {
 		<div ref={el} id="footer">
 			<FooterWrapper ref={child} className='container'>
 				<Wrapper>
-					<Typography variant='body2'>{text[language]} - contact@aperture.finance</Typography>
+					<Typography variant='body2'>{text[language]} - <a className='linkClass' href="mailto:contact@aperture.finance">contact@aperture.finance</a></Typography>
 					<Icons>
 						{
 							iconLinks.map((icon, i) => (

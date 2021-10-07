@@ -1,6 +1,7 @@
 import React from 'react';
 import { useApp } from '../context/Context';
 import styled from 'styled-components';
+import { HashLink } from 'react-router-hash-link';
 
 // Hook for checking viewport + animation package
 import { useInView } from 'react-hook-inview';
@@ -80,7 +81,7 @@ export default function What() {
 	}
 
 	const learnText = {
-		english: 'To learn more about the funds Aperture Finance has to offer, please visit this page.',
+		english: 'To learn more about the funds Aperture Finance has to offer, please visit',
 		chinese: '如需进一步了解Aperture Finance所提供的基金，请访问此页面。'
 	}
 
@@ -101,7 +102,7 @@ export default function What() {
 			</ListWrapper>
 			<div ref={ref}>
 				<SmoothList transitionDuration={1000} delay={200} visible={view}>
-					<Typography variant='body1'>{learnText[language]}</Typography>
+					<Typography variant='body1'>{learnText[language]} <HashLink className='linkClass' to='/#funds'>this page.</HashLink></Typography>
 				</SmoothList>
 			</div>
 		</Wrapper>

@@ -9,67 +9,46 @@ import { Chart, LineAdvance } from 'bizcharts';
 import Typography from '@mui/material/Typography';
 
 const ChartWrapper = styled.div`
-	width: 45%!important;
+	width: 42.5%!important;
 	box-shadow: 0px 1px 2px rgba(20, 28, 31, 0.02), 0px 4px 8px rgba(20, 28, 31, 0.08);
-	padding: 24px;
+	padding: 2rem 2rem 1rem;
 	margin-top: 2rem;
 	border-radius: 8px;
 	& .textColor {
 		margin-bottom: 1rem;
+	}
+	@media (max-width: 1050px) {
+		width: 100%!important;
+		padding: 1rem;
+	}
+	@media (max-width: 900px) and (max-height: 500px) {
+		width: 350px!important;
+		margin-top: 1rem;
+		padding: 0 1rem;
+		& > div {
+			height: 200px!important;
+		}
+	}
+	@media (max-width: 600px) {
+		padding: 0 8px;
 	}
 `;
 
 const ChartBody = styled(Chart)`
 `;
 
-const data = [
-	{
-		month: "Jan",
-		value: "Tokyo",
-		val: 50
-	},
-	{
-		month: "Feb",
-		value: "Tokyo",
-		val: 175
-	},
-	{
-		month: "Mar",
-		value: "Tokyo",
-		val: 90
-	},
-	{
-		month: "Apr",
-		value: "Tokyo",
-		val: 425
-	},
-	{
-		month: "May",
-		value: "Tokyo",
-		val: 150
-	},
-	{
-		month: "Jun",
-		value: "Tokyo",
-		val: 200
-	},
-	{
-		month: "Jul",
-		value: "Tokyo",
-		val: 305
-	},
-];
 
-export default function Charts() {
+export default function Charts(props) {
 	return (
 		<ChartWrapper>
-			<Typography variant='body2' className='textColor'>Assets Under Management</Typography>
-			<ChartBody padding={[10, 20, 50, 40]} autoFit height={300} data={data} >
+			{props.text && <Typography variant='body2' className='textColor'>{props.text}</Typography>}
+			<ChartBody padding={[10, 20, 70, 50]} autoFit height={300} data={props.data} >
 				<LineAdvance
 					shape="smooth"
 					point
 					area
-					position="month*val"
+					position="week*Value"
+					color={props.color}
 				/>
 			
 			</ChartBody>

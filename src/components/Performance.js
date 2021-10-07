@@ -78,8 +78,18 @@ const CardWrapper = styled.div`
 			font-size: .75rem;
 		}
 	}
+	@media (max-width: 900px) and (max-height: 500px) {
+		margin-right: 0rem;
+		margin-left: 1rem;
+	}
 	@media (max-width: 600px) and (max-height: 700px) {
 		margin: .5rem 0;
+	}
+`;
+
+const ChartWrapper = styled.div`
+	@media (max-width: 900px) and (max-height: 500px) {
+		display: flex;
 	}
 `;
 
@@ -101,6 +111,7 @@ export default function Performance() {
 
 	const { language } = useApp();
 	const [view, setView] = React.useState(false);
+	const [width, setWidth] = React.useState(window.innerWidth);
   const el = React.useRef(null);
   const child = React.useRef(null);
   const [ref, isVisible] = useInView({
@@ -119,11 +130,22 @@ export default function Performance() {
 			el.current.style.zIndex = '-3';
 		}
   }
+
   React.useEffect(() => {
+
     const watchScroll = () => {
       window.addEventListener("scroll", handleScroll);
     }
+
+    const watchWidth = () => {
+    	window.addEventListener('resize', function() {
+    		let width = window.innerWidth;
+    		setWidth(width);
+    	})
+    }
+
     watchScroll();
+    watchWidth();
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -148,39 +170,102 @@ export default function Performance() {
 	}
 
 	const cardText = [
-		{title: 'Rolling 7-day APR', number: 46.62},
-		{title: 'Rolling 7-day APY', number: 144.75},
-		{title: 'Avg. APR since Inception', number: 42.69},
-		{title: 'Avg. APY since Inception', number: 52.1},
+		{title: 'Rolling 7-day APR', number: 101.55},
+		{title: 'Rolling 7-day APY', number: 173.38},
+		{title: 'Avg. APR since Inception', number: 50.59},
+		{title: 'Avg. APY since Inception', number: 62.32},
 	]
+
+	const dataWeb = [
+		{
+			text: 'Assets Under Management',
+			dataPoints: [
+				{ week: '8/2/21', type: 'AUM', Value: 400813.11 },
+				{ week: '8/9/21', type: 'AUM', Value: 402905.28 },
+				{ week: '8/16/21', type: 'AUM', Value: 405381.06 },
+				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
+				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
+				{ week: '9/6/21', type: 'AUM', Value: 417925.08 },
+				{ week: '9/13/21', type: 'AUM', Value: 421273.71 },
+				{ week: '9/20/21', type: 'AUM', Value: 424638.33 },
+				{ week: '9/27/21', type: 'AUM', Value: 427899.15 },
+				{ week: '10/4/21', type: 'AUM', Value: 434471.85 },
+			]
+		},
+		{
+			text: 'Cumulative Return',
+			dataPoints: [
+				{ week: '8/2/21', type: 'CR', Value: 0 },
+				{ week: '8/9/21', type: 'CR', Value: 2092.17 },
+				{ week: '8/16/21', type: 'CR', Value: 4567.95 },
+				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
+				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
+				{ week: '9/6/21', type: 'CR', Value: 17111.97 },
+				{ week: '9/13/21', type: 'CR', Value: 20460.60 },
+				{ week: '9/20/21', type: 'CR', Value: 23825.22 },
+				{ week: '9/27/21', type: 'CR', Value: 27086.04 },
+				{ week: '10/4/21', type: 'CR', Value: 33658.74 },
+			]
+		}
+	];
+
+	const dataMobile = [
+		{
+			dataPoints: [
+				{ week: '8/2/21', type: 'AUM', Value: 400813.11 },
+				{ week: '8/2/21', type: 'CR', Value: 0 },
+				{ week: '8/9/21', type: 'AUM', Value: 402905.28 },
+				{ week: '8/9/21', type: 'CR', Value: 2092.17 },
+				{ week: '8/16/21', type: 'AUM', Value: 405381.06 },
+				{ week: '8/16/21', type: 'CR', Value: 4567.95 },
+				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
+				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
+				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
+				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
+				{ week: '9/6/21', type: 'AUM', Value: 417925.08 },
+				{ week: '9/6/21', type: 'CR', Value: 17111.97 },
+				{ week: '9/13/21', type: 'AUM', Value: 421273.71 },
+				{ week: '9/13/21', type: 'CR', Value: 20460.60 },
+				{ week: '9/20/21', type: 'AUM', Value: 424638.33 },
+				{ week: '9/20/21', type: 'CR', Value: 23825.22 },
+				{ week: '9/27/21', type: 'AUM', Value: 427899.15 },
+				{ week: '9/27/21', type: 'CR', Value: 27086.04 },
+				{ week: '10/4/21', type: 'AUM', Value: 434471.85 },
+				{ week: '10/4/21', type: 'CR', Value: 33658.74 },
+			]
+		}
+	];
+
+	const data = width > 1050 ? dataWeb : dataMobile;
 
 	return (
 		<div ref={el} id='performance'>
 			<Wrapper ref={child} className='container'>
 				<Typography style={{fontWeight: 600}} variant='h4'>{text[language] && text[language].header}</Typography>
 				<Typography style={{marginTop: '1.25rem'}} variant='body1'>{text[language] && text[language].subText}</Typography>
-				<ChartContainer>
-					<Charts />
-					<Charts />
-				</ChartContainer>
-				<div ref={ref}>
-					<CardContainer transitionDuration={500} delay={200} visible={view}>
-						<span>
-							{
-								cardText.slice(0, 2).map((card, i) => (
-									<Card title={card.title} number={card.number} />
-								))
-							}
-						</span>
-						<span>
-							{
-								cardText.slice(2, 4).map((card, i) => (
-									<Card title={card.title} number={card.number} />
-								))
-							}
-						</span>
-					</CardContainer>
-				</div>
+				<ChartWrapper>
+					<ChartContainer>
+						{ data.map((d, i) => <Charts key={i} color={width < 1050 ? 'type' : '#10B981'} text={data && d.text} data={data && d.dataPoints} /> )}
+					</ChartContainer>
+					<div ref={ref}>
+						<CardContainer transitionDuration={500} delay={200} visible={view}>
+							<span>
+								{
+									cardText.slice(0, 2).map((card, i) => (
+										<Card title={card.title} number={card.number} />
+									))
+								}
+							</span>
+							<span>
+								{
+									cardText.slice(2, 4).map((card, i) => (
+										<Card title={card.title} number={card.number} />
+									))
+								}
+							</span>
+						</CardContainer>
+					</div>
+				</ChartWrapper>
 				<Typography variant='body1'>{text[language] && text[language].disclaimer}</Typography>
 			</Wrapper>
 		</div>

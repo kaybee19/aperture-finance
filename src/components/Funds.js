@@ -58,12 +58,12 @@ export default function Funds() {
 	const text = {
 		english: {
 			title: 'Funds Available',
-			subText: 'For more information, please contact: contact@aperture.finance',
+			subText: 'For more information, please contact: ',
 			header: 'Portfolio Strategy',
 		},
 		chinese: {
 			title: '基金种类',
-			subText: '详情请联系: contact@aperture.finance',
+			subText: '详情请联系: ',
 			header: '投资策略',
 		}
 	};
@@ -85,7 +85,7 @@ export default function Funds() {
 		<Wrapper id='funds' className='borderClass container'>
 			<TextWrapper>
 				<Typography variant='h4' style={{fontWeight: 600}}>{text[language] && text[language].title}</Typography>
-				<Typography variant='body1'>{text[language] && text[language].subText}</Typography>
+				<Typography variant='body1'>{text[language] && text[language].subText} <a className='linkClass' href="mailto:contact@aperture.finance">contact@aperture.finance</a></Typography>
 			</TextWrapper>
 			<div ref={ref}>
 				<TableWrapper transitionDuration={1000} delay={200} visible={view}>

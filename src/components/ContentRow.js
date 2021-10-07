@@ -2,7 +2,7 @@ import React from 'react';
 import { useApp } from '../context/Context';
 import diversify from '../assets/gif/diversify.gif';
 import defi from '../assets/gif/defi.gif';
-import tech from '../assets/gif/tech_1.gif';
+import tech from '../assets/gif/tech.gif';
 
 // Comps
 import Content from './Content';
