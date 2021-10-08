@@ -30,6 +30,7 @@ const Wrapper = styled.div`
 const TextWrapper = styled(SmoothList)`
 	max-width: 506px;
 	color: white;
+  min-width: 300px;
 	& h4 {
 		margin-bottom: 1rem;
 	}

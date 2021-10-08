@@ -90,7 +90,7 @@ export default function LaunchApp() {
   // Function + useEffect for handling fixed background
   const handleScroll = () => {
   	let rect = el.current.getBoundingClientRect();
-		if (rect.bottom < -100) {
+		if (rect.bottom < 0) {
 			child.current.style.zIndex = '-5';
 			el.current.style.zIndex = '-5';
 		}
