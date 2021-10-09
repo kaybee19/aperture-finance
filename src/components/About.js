@@ -116,7 +116,7 @@ export default function About() {
 					<CardWrapper container justifyContent='center'>
 						{
 							founderText[language].map((text, i) => (
-								<Grid item xs={12} md={6} spacing={4}>
+								<Grid key={i} item xs={12} md={6}>
 									<FounderCard text={text} key={i} />
 								</Grid>
 							))

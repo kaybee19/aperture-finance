@@ -45,21 +45,23 @@ export default function Hero(props) {
 		chinese: '投资策略'
 	};
 
-  const particlesInit = (main) => {
-    console.log(main);
-  }
-  
-  const particlesLoaded = (container) => {
-    console.log(container);
-  }
+
+
+  // const particlesInit = (main) => {
+  //   console.log(main);
+  // }
+  // const particlesLoaded = (container) => {
+  //   console.log(container);
+  // }
 
 	return (
 		<div className="bg-white">
 			<Wrapper transitionDuration={1000} className='heroText'>
+			{/* Particles component */}
 				<Particles
 		    id="tsparticles"
-		    init={particlesInit}
-		    loaded={particlesLoaded}
+		    // init={particlesInit}
+		    // loaded={particlesLoaded}
 		    options={{
 		    	"autoPlay":true,
 		    	"background":{"color":{"value":"transparent"},

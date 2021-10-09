@@ -1,5 +1,4 @@
 import React from 'react';
-import { useApp } from '../context/Context';
 import styled from 'styled-components';
 
 // Material UI
@@ -26,12 +25,9 @@ const Header = styled(Typography)`
 `;
 
 const Body = styled(Typography)`
-	
 `;
 
 export default function TableList(props) {
-
-	const { language } = useApp();
 
 	return (
 		<Wrapper>

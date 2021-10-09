@@ -52,6 +52,7 @@ const AppProvider = ({children}) => {
 		return color;
 	}
 
+	// Langauge update function
 	const langSelect = (lan) => {
 
 		// Update state of language in application and local storage

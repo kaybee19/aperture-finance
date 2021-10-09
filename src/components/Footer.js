@@ -44,7 +44,7 @@ const Icons = styled.div`
 
 const Icon = (props) => {
 	return(
-		<a target='_blank' href={props.link}>
+		<a target='_blank' rel="noreferrer" href={props.link}>
 			<span style={{color: props.color}}>{props.icon}</span>
 		</a>
 	)

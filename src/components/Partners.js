@@ -14,9 +14,6 @@ import SmoothList from 'react-smooth-list';
 // Material UI
 import Typography from '@mui/material/Typography';
 
-// Comps
-import TableList from './TableList';
-
 const Wrapper = styled.div`
 	background-color: #222225;
 	color: white;
@@ -122,7 +119,7 @@ export default function Partners() {
 				<IconWrapper transitionDuration={1000} delay={200} visible={view}>
 					{
 						images.slice(0,4).map((img, i) => (
-							<Image>
+							<Image key={i}>
 								<img src={Object.values(img)} alt={Object.keys(img)} />
 							</Image>
 						))
@@ -131,7 +128,7 @@ export default function Partners() {
 				<IconWrapper transitionDuration={1000} delay={200} visible={view}>
 					{
 						images.slice(4,7).map((img, i) => (
-							<Image>
+							<Image key={i}>
 								<img src={Object.values(img)} alt={Object.keys(img)} />
 							</Image>
 						))

@@ -209,6 +209,9 @@ const GlobalStyle = createGlobalStyle`
 		@media (max-width: 900px) and (max-height: 500px) {
 			min-height: 50vh;
 		}
+		@media (max-width: 365px) {
+			min-height: 27.5vh;
+		}
 	}
 
 

@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import GlobalStyle from './/styles/GlobalStyle'
 
-// Context wrapper for passing props across the web app
+// Context wrapper for passing language and color props
 import { AppProvider } from './context/Context';
 
 // Comps

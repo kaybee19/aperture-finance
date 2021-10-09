@@ -110,7 +110,6 @@ export default function CardContainer() {
 
 	const { language, colorSelect } = useApp();
 	const [view, setView] = React.useState(false);
-  const [scroll, setScroll] = React.useState(0);
   const el = React.useRef(null);
   const child = React.useRef(null);
 

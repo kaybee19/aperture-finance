@@ -44,7 +44,7 @@ const TableWrapper = styled(SmoothList)`
 
 export default function Funds() {
 
-	const { language, colorSelect } = useApp();
+	const { language } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
     threshold: 1,
@@ -93,7 +93,7 @@ export default function Funds() {
 					<hr />
 					{
 						tableText[language].map((item, i) => (
-							<TableList text={item} />
+							<TableList key={i} text={item} />
 						))
 					}
 				</TableWrapper>

@@ -132,18 +132,15 @@ export default function Performance() {
   }
 
   React.useEffect(() => {
-
     const watchScroll = () => {
       window.addEventListener("scroll", handleScroll);
     }
-
     const watchWidth = () => {
     	window.addEventListener('resize', function() {
     		let width = window.innerWidth;
     		setWidth(width);
     	})
     }
-
     watchScroll();
     watchWidth();
     return () => {
@@ -252,14 +249,14 @@ export default function Performance() {
 							<span>
 								{
 									cardText.slice(0, 2).map((card, i) => (
-										<Card title={card.title} number={card.number} />
+										<Card key={i} title={card.title} number={card.number} />
 									))
 								}
 							</span>
 							<span>
 								{
 									cardText.slice(2, 4).map((card, i) => (
-										<Card title={card.title} number={card.number} />
+										<Card key={i} title={card.title} number={card.number} />
 									))
 								}
 							</span>

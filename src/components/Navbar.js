@@ -77,6 +77,7 @@ const Image = styled.img`
 	cursor: pointer;
 `;
 
+// Reusable nav links component
 const NavLinks = (props) => {
 	return (
 		<HashLink className='button-link' to={`/#${props.link}`}>

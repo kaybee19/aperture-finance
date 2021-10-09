@@ -96,7 +96,7 @@ export default function What() {
 				{
 					listText[language] &&
 					listText[language].map((item, i) => (
-						<List text={item} />
+						<List key={i} text={item} />
 					))
 				}
 			</ListWrapper>
