@@ -27,14 +27,29 @@ const ChartWrapper = styled.div`
 	}
 	@media (max-width: 900px) and (max-height: 500px) {
 		width: 300px!important;
+		& > div {
+			height: 150px!important;
+		}
+	}
+	@media (max-width: 900px) and (min-height: 500px) {
+		width: auto!important;
 		margin-top: 1rem;
 		padding: 0 1rem;
 		& > div {
-			height: 200px!important;
+			height: 250px!important;
 		}
 	}
-	@media (max-width: 900px) and (max-height: 500px) {
-		width: 350px!important;
+	@media (max-width: 900px) and (max-height: 400px) {
+		width: 300px!important;
+		& > div {
+			height: 110px!important;
+		}
+	}
+	@media (max-width: 900px) and (max-height: 365px) {
+		width: 250px!important;
+		& > div {
+			height: 115px!important;
+		}
 	}
 	@media (max-width: 600px) {
 		padding: 0 8px;
@@ -45,6 +60,12 @@ const ChartBody = styled(Chart)`
 	@media (max-width: 900px) {
 		max-height: 200px;
 		width: auto!important;
+	}
+	@media (max-width: 700px) and (max-height: 400px) {
+		max-height: 150px;
+	}
+	@media (max-width: 400px) and (max-height: 700px) {
+		max-height: 150px;
 	}
 `;
 
