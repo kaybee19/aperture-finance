@@ -96,6 +96,10 @@ const ChartWrapper = styled.div`
 const ChartContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
+  width: 100%;
+	@media (max-width: 900px) and (min-height: 500px) {
+		flex-direction: column;
+	}
 `
 
 const Card = (props) => {
@@ -206,35 +210,6 @@ export default function Performance() {
 		}
 	];
 
-	const dataMobile = [
-		{
-			dataPoints: [
-				{ week: '8/2/21', type: 'AUM', Value: 400813.11 },
-				{ week: '8/2/21', type: 'CR', Value: 0 },
-				{ week: '8/9/21', type: 'AUM', Value: 402905.28 },
-				{ week: '8/9/21', type: 'CR', Value: 2092.17 },
-				{ week: '8/16/21', type: 'AUM', Value: 405381.06 },
-				{ week: '8/16/21', type: 'CR', Value: 4567.95 },
-				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
-				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
-				{ week: '8/23/21', type: 'AUM', Value: 407991.74 },
-				{ week: '8/23/21', type: 'CR', Value: 7178.63 },
-				{ week: '9/6/21', type: 'AUM', Value: 417925.08 },
-				{ week: '9/6/21', type: 'CR', Value: 17111.97 },
-				{ week: '9/13/21', type: 'AUM', Value: 421273.71 },
-				{ week: '9/13/21', type: 'CR', Value: 20460.60 },
-				{ week: '9/20/21', type: 'AUM', Value: 424638.33 },
-				{ week: '9/20/21', type: 'CR', Value: 23825.22 },
-				{ week: '9/27/21', type: 'AUM', Value: 427899.15 },
-				{ week: '9/27/21', type: 'CR', Value: 27086.04 },
-				{ week: '10/4/21', type: 'AUM', Value: 434471.85 },
-				{ week: '10/4/21', type: 'CR', Value: 33658.74 },
-			]
-		}
-	];
-
-	const data = width > 1050 ? dataWeb : dataMobile;
-
 	return (
 		<div ref={el} id='performance'>
 			<Wrapper ref={child} className='container'>
@@ -242,10 +217,10 @@ export default function Performance() {
 				<Typography style={{marginTop: '1.25rem'}} variant='body1'>{text[language] && text[language].subText}</Typography>
 				<ChartWrapper>
 					<ChartContainer>
-						{ data.map((d, i) => <Charts key={i} color={width < 1050 ? 'type' : '#10B981'} text={data && d.text} data={data && d.dataPoints} /> )}
+						{ dataWeb.map((d, i) => <Charts key={i} text={dataWeb && d.text} data={dataWeb && d.dataPoints} /> )}
 					</ChartContainer>
 					<div ref={ref}>
-						<CardContainer transitionDuration={500} delay={200} visible={view}>
+						<CardContainer className={width < 900 && 'hiddenClass'} transitionDuration={500} delay={200} visible={view}>
 							<span>
 								{
 									cardText.slice(0, 2).map((card, i) => (

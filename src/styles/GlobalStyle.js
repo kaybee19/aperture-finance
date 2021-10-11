@@ -47,6 +47,9 @@ const GlobalStyle = createGlobalStyle`
 		color: #5234F9!important;
 		text-decoration: none;
 	}
+	.hiddenClass {
+		display: none!important;
+	}
 
 	/*-- Fonts --*/
 
