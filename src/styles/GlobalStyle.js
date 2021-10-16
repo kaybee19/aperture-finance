@@ -201,18 +201,29 @@ const GlobalStyle = createGlobalStyle`
 		width: 100%;
 	}
 
+	/*-- About --*/
+	#about {
+		box-shadow: rgba(0, 0, 0, 0.075) 0px 25px 50px -12px;
+	}
+
 	/*-- Footer --*/
 	#footer {
 		min-height: 18vh;
     background: white;
 		position: relative;
-		@media (max-width: 900px) {
+	}
+	@media (max-width: 900px) {
+		#footer {
 			min-height: 22.5vh;
 		}
-		@media (max-width: 900px) and (max-height: 500px) {
+	}
+	@media (max-width: 900px) and (max-height: 500px) {
+		#footer {
 			min-height: 50vh;
 		}
-		@media (max-width: 365px) {
+	}
+	@media (max-width: 365px) {
+		#footer {
 			min-height: 27.5vh;
 		}
 	}

@@ -11,6 +11,11 @@ const Wrapper = styled.div`
 	align-items: baseline;
 	@media (max-width: 900px) {
 		flex-direction: column;
+		padding: 16px 24px;
+		background: #2C2C30;
+		box-shadow: 0px 1px 2px rgba(82, 52, 249, 0.02), 0px 4px 8px rgba(82, 52, 249, 0.08);
+		border-radius: 8px;
+		margin: 20px 0px 40px;
 	}
 `;
 

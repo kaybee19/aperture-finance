@@ -26,7 +26,7 @@ export default function Home() {
 			<Performance />
 			<Funds />
 			<About />
-			<Partners />
+			{/*<Partners />*/}
 		</React.Fragment>
 	);
 };

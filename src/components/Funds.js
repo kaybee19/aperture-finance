@@ -40,6 +40,12 @@ const TableWrapper = styled(SmoothList)`
 		border-left: 0;
 		border-right: 0;
 	}
+	@media (max-width: 900px) {
+		background-color: transparent;
+		& hr {
+			display: none;
+		}
+	}
 `;
 
 export default function Funds() {
