@@ -94,6 +94,21 @@ export default class Icons extends React.Component {
 			{ icon: loopringLogo, name: 'Loopring' },
 			{ icon: oxLogo, name: 'Zrx' },
 			{ icon: aaveLogo, name: 'Aave' },
+			{ icon: daiLogo, name: 'Dai' },
+			{ icon: yearnLogo, name: 'Yearn Finanace' },
+			{ icon: loopringLogo, name: 'Loopring' },
+			{ icon: oxLogo, name: 'Zrx' },
+			{ icon: aaveLogo, name: 'Aave' },
+			{ icon: daiLogo, name: 'Dai' },
+			{ icon: yearnLogo, name: 'Yearn Finanace' },
+			{ icon: loopringLogo, name: 'Loopring' },
+			{ icon: oxLogo, name: 'Zrx' },
+			{ icon: aaveLogo, name: 'Aave' },
+			{ icon: daiLogo, name: 'Dai' },
+			{ icon: yearnLogo, name: 'Yearn Finanace' },
+			{ icon: loopringLogo, name: 'Loopring' },
+			{ icon: oxLogo, name: 'Zrx' },
+			{ icon: aaveLogo, name: 'Aave' },
 		],
 		[
 			{ icon: makerLogo, name: 'Maker' },
@@ -101,8 +116,38 @@ export default class Icons extends React.Component {
 			{ icon: chainlinkLogo, name: 'Chainlink' },
 			{ icon: bitcoinLogo, name: 'Bitcoin' },
 			{ icon: compoundLogo, name: 'Compound' },
+			{ icon: makerLogo, name: 'Maker' },
+			{ icon: umaLogo, name: 'Uma' },
+			{ icon: chainlinkLogo, name: 'Chainlink' },
+			{ icon: bitcoinLogo, name: 'Bitcoin' },
+			{ icon: compoundLogo, name: 'Compound' },
+			{ icon: makerLogo, name: 'Maker' },
+			{ icon: umaLogo, name: 'Uma' },
+			{ icon: chainlinkLogo, name: 'Chainlink' },
+			{ icon: bitcoinLogo, name: 'Bitcoin' },
+			{ icon: compoundLogo, name: 'Compound' },
+			{ icon: makerLogo, name: 'Maker' },
+			{ icon: umaLogo, name: 'Uma' },
+			{ icon: chainlinkLogo, name: 'Chainlink' },
+			{ icon: bitcoinLogo, name: 'Bitcoin' },
+			{ icon: compoundLogo, name: 'Compound' },
 		],
 		[
+			{ icon: uniLogo, name: 'Uniswap' },
+			{ icon: kyberLogo, name: 'Knc' },
+			{ icon: synthetixLogo, name: 'Synthetix Network' },
+			{ icon: renLogo, name: 'Ren' },
+			{ icon: avaxLogo, name: 'Avalanche' },
+			{ icon: uniLogo, name: 'Uniswap' },
+			{ icon: kyberLogo, name: 'Knc' },
+			{ icon: synthetixLogo, name: 'Synthetix Network' },
+			{ icon: renLogo, name: 'Ren' },
+			{ icon: avaxLogo, name: 'Avalanche' },
+			{ icon: uniLogo, name: 'Uniswap' },
+			{ icon: kyberLogo, name: 'Knc' },
+			{ icon: synthetixLogo, name: 'Synthetix Network' },
+			{ icon: renLogo, name: 'Ren' },
+			{ icon: avaxLogo, name: 'Avalanche' },
 			{ icon: uniLogo, name: 'Uniswap' },
 			{ icon: kyberLogo, name: 'Knc' },
 			{ icon: synthetixLogo, name: 'Synthetix Network' },
@@ -119,11 +164,6 @@ export default class Icons extends React.Component {
 							<Icon key={i} name={icon.name} icon={icon.icon} />
 						))
 					}
-					{
-						icons[0].map((icon, i) => (
-							<Icon key={i} name={icon.name} icon={icon.icon} />
-						))
-					}
 				</IconBody>
 				<IconBody className='reverse'>
 					{
@@ -131,18 +171,8 @@ export default class Icons extends React.Component {
 							<Icon key={i} name={icon.name} icon={icon.icon} />
 						))
 					}
-					{
-						icons[1].map((icon, i) => (
-							<Icon key={i} name={icon.name} icon={icon.icon} />
-						))
-					}
 				</IconBody>
 				<IconBody>
-					{
-						icons[2].map((icon, i) => (
-							<Icon key={i} name={icon.name} icon={icon.icon} />
-						))
-					}
 					{
 						icons[2].map((icon, i) => (
 							<Icon key={i} name={icon.name} icon={icon.icon} />
