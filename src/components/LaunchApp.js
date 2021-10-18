@@ -55,6 +55,7 @@ const TextWrapper = styled.div`
 const Image = styled.img`
 	width: 900px;
 	position: relative;
+	border-radius: 8px;
 	left: 200px;
   @media (min-width: 1800px) {
 		left: 100px;
@@ -113,7 +114,7 @@ export default function LaunchApp() {
 		english: {
 			subTitle: 'APERTURE FINANCE',
 			title: 'Investor Portal',
-			body: 'Fames sagittis, velit turpis et donec accumsan auctor mi laoreet. Imperdiet phasellus mattis tortor, ultricies cras aliquet iaculis.',
+			body: 'Access our investor portal to get started with our yield-farming, or check your investment profile',
 			button: 'Launch App'
 		},
 		chinese: {
