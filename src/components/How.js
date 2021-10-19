@@ -68,6 +68,10 @@ const CardBody = styled.div`
 		top: 65px;
 		transition: .25s;
 	}
+	.cardBottom {
+		opacity: 0;
+		top: 100px;
+	}
 	& button {
 		color: black;
 		font-weight: 500!important;
@@ -76,18 +80,15 @@ const CardBody = styled.div`
 		margin-left: 0;
 		padding-left: 3rem!important;
 		padding-right: 3rem!important;
-		opacity: 0;
 		position: relative;
 		max-height: 0;
-		top: 100px;
 	}
 	:hover .cardText {
 		top: 0;
 		transition: top .25s;
 		transition-timing-function: ease-out;
 	}
-	:hover > button {
-		max-height: 45px;
+	:hover .cardBottom {
 		opacity: 1;
 		top: 0;
 		transition: .25s;
@@ -128,9 +129,10 @@ const Card = (props) => {
 			<img width='44' src={props.icon} alt='icon' />
 			<span className='cardText'>
 				<Typography variant='h5'>{props.header}</Typography>
+			</span>
+			<span className='cardBottom'>
 				<Typography variant='body2'>{props.text}</Typography>
 			</span>
-			<AppButton text='Learn More' color='white' />
 		</CardBody>
 	)
 }
