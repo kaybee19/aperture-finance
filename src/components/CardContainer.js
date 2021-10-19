@@ -114,7 +114,7 @@ export default function CardContainer() {
   const child = React.useRef(null);
 
   const [ref, isVisible] = useInView({
-    threshold: .25,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter

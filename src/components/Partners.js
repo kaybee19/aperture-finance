@@ -79,7 +79,7 @@ export default function Partners() {
 	const { language } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: .5,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter

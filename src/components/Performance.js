@@ -119,7 +119,7 @@ export default function Performance() {
   const el = React.useRef(null);
   const child = React.useRef(null);
   const [ref, isVisible] = useInView({
-    threshold: 1,
+    threshold: 0,
   })
 
   // Function + useEffect for handling fixed background

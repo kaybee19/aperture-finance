@@ -47,7 +47,7 @@ export default function About() {
 	const { language } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: .25,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter

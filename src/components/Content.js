@@ -44,7 +44,7 @@ export default function Content(props) {
 	const { colorSelect } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: .25,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter

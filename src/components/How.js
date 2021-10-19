@@ -140,7 +140,7 @@ export default function How() {
 	const { language, colorSelect } = useApp();
 	const [view, setView] = React.useState(false);
   const [ref, isVisible] = useInView({
-    threshold: 1,
+    threshold: 0,
   })
 
   // Trigger setView on viewport enter
