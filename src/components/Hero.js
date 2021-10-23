@@ -34,7 +34,7 @@ export default function Hero(props) {
 
 	const h2Text = {
 		english: 'Yield-farming DeFi Portfolio Actively Managed',
-		chinese: '去中心化金融(DeFi) 收益聚合主动基金'
+		chinese: `去中心化金融(DeFi)\n 收益聚合主动基金`
 	};
 	const subText = {
 		english: 'Higher returns than traditional yield aggregators with a combination of active strategies empowered by smart contracts.',
@@ -337,7 +337,7 @@ export default function Hero(props) {
 		    	"zLayers":100
 		    }}
 		  />
-				<Typography variant='h2' className='fontBold'>{h2Text[language]}</Typography>
+				<Typography style={{whiteSpace: 'pre-line'}} variant='h2' className='fontBold'>{h2Text[language]}</Typography>
 				<Typography className='textColor' variant='body1'>{subText[language]}</Typography>
 				<HashLink className='button-link' to='/#how'>
 					<AppButton text={buttonText[language]} color={colorSelect('primary')} />
